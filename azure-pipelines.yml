@@ -24,7 +24,7 @@ steps:
    
   displayName: 'Install anypoint CLI'
 - script: |
-   anypoint-cli --username=joji1 --password=Canadavisa25@ --organization="NJC POC" governance api validate --rulesets ruleset.yaml  'mule-salesforce.zip'
+   anypoint-cli --username=joji_NJC --password=Canadavisa25@ --organization="NJC POC" governance api validate --rulesets ruleset.yaml  'mule-salesforce.zip'
    
   displayName: 'Api Goverance'
 - task: DownloadSecureFile@1
