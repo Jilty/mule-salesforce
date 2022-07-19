@@ -18,6 +18,15 @@ variables:
   value: '-Dsecure.key=mule -Dmule.env=dev '    
 
 steps:
+
+- script: |
+   npm install -g anypoint-cli@latest
+   
+  displayName: 'Install anypoint CLI'
+- script: |
+   sh anypoint-cli --username=joji1 --password=Canadavisa25@ --organization="NJC POC" governance api validate --rulesets ruleset.yaml  mule-salesforce.zip'
+   
+  displayName: 'Api Goverance'
 - task: DownloadSecureFile@1
   name: muleSettingsFile
   displayName: 'Download Mulesoft Settings'
